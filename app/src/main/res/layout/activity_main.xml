@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dari"
+        android:textSize="20dp"
+        android:layout_alignLeft="@+id/origin"/>
+
+    <ImageView
+        android:id="@+id/train"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/from"
+        android:src="@drawable/ic_train"/>
+
+    <EditText
+        android:id="@+id/origin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/train"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/train"
+        android:inputType="text"
+        android:hint="Pilih kota/Stasiun asal"/>
+
+    <TextView
+        android:id="@+id/to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ke"
+        android:textSize="20dp"
+        android:layout_below="@+id/origin"
+        android:layout_alignLeft="@+id/origin"/>
+
+    <ImageView
+        android:id="@+id/train_two"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/to"
+        android:src="@drawable/ic_train_two"
+        />
+
+    <EditText
+        android:id="@+id/purpose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/train_two"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/train_two"
+        android:inputType="text"
+        android:hint="Pilih kota/Stasiun tujuan"/>
+
+    <TextView
+        android:id="@+id/date_gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal Pergi"
+        android:textSize="20dp"
+        android:layout_below="@+id/train_two"
+        android:layout_alignLeft="@+id/purpose"/>
+
+
+    <ImageView
+        android:id="@+id/calendar"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/date_gone"
+        android:src="@drawable/ic_timetable" />
+
+    <EditText
+        android:id="@+id/choose_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/calendar"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/calendar"
+        android:inputType="date"
+        android:hint="Pilih Tanggal"/>
+
+    <TextView
+        android:id="@+id/go_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pulang pergi?"
+        android:textSize="20dp"
+        android:layout_below="@+id/purpose"
+        android:layout_alignRight="@+id/choose_date"/>
+
+    <Switch
+        android:id="@+id/mySwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/go_home"
+        android:layout_alignRight="@+id/go_home"/>
+
+    <TextView
+        android:id="@+id/passenger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Penumpang"
+        android:textSize="20dp"
+        android:layout_below="@+id/calendar"
+        android:layout_alignLeft="@+id/choose_date"/>
+
+    <ImageView
+        android:id="@+id/walk_way"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/passenger"
+        android:src="@drawable/ic_walkway"/>
+
+    <EditText
+        android:id="@+id/passenger_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/walk_way"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/walk_way"
+        android:inputType="text"
+        android:hint="kategori penumpang"/>
+
+    <TextView
+        android:id="@+id/additional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passenger_category"
+        android:text="Penumpang bayi tidak mendapat kursi sendiri"
+        android:textSize="15dp"
+        android:layout_alignLeft="@+id/passenger_category"
+        android:lines="10"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/additional"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#FFFFFFFF"
+        android:text="Oke"
+        android:textSize="24sp"
+        android:layout_below="@+id/additional"
+        android:background="#FFFF0000"/>
+
+
+
+
+</RelativeLayout>
