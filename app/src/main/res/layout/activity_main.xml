@@ -23,13 +23,16 @@
 
     <EditText
         android:id="@+id/origin"
-        android:layout_width="0dp"
+        android:layout_width="242dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/train"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_marginEnd="71dp"
+        android:layout_marginRight="71dp"
         android:layout_toEndOf="@+id/train"
-        android:inputType="text"
-        android:hint="Pilih kota/Stasiun asal"/>
+        android:hint="Pilih kota/Stasiun asal"
+        android:inputType="text" />
 
     <TextView
         android:id="@+id/to"
@@ -159,13 +162,16 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
-        android:layout_width="96dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_done"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/from"
         android:layout_alignRight="@+id/origin"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="-54dp"
         android:backgroundTint="#FF0000FF"
-        android:tint="#FFFFFFFF"/>
+        android:src="@drawable/ic_done"
+        android:tint="#FFFFFFFF" />
 
 
 </RelativeLayout>
