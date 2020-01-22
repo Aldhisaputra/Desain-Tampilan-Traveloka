@@ -3,26 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_margin="24dp">
 
     <TextView
         android:id="@+id/from"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/origin"
         android:text="Dari"
-        android:textSize="20dp"
-        android:layout_alignLeft="@+id/origin"/>
+        android:textSize="20dp" />
 
     <ImageView
         android:id="@+id/train"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@id/from"
-        android:src="@drawable/ic_train"/>
+        android:src="@drawable/ic_train" />
 
     <EditText
         android:id="@+id/origin"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/train"
         android:layout_alignParentRight="true"
@@ -37,15 +38,14 @@
         android:text="Ke"
         android:textSize="20dp"
         android:layout_below="@+id/origin"
-        android:layout_alignLeft="@+id/origin"/>
+        android:layout_alignLeft="@+id/origin" />
 
     <ImageView
         android:id="@+id/train_two"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@+id/to"
-        android:src="@drawable/ic_train_two"
-        />
+        android:src="@drawable/ic_train_two" />
 
     <EditText
         android:id="@+id/purpose"
@@ -55,7 +55,7 @@
         android:layout_alignParentRight="true"
         android:layout_toEndOf="@+id/train_two"
         android:inputType="text"
-        android:hint="Pilih kota/Stasiun tujuan"/>
+        android:hint="Pilih kota/Stasiun tujuan" />
 
     <TextView
         android:id="@+id/date_gone"
@@ -64,7 +64,7 @@
         android:text="Tanggal Pergi"
         android:textSize="20dp"
         android:layout_below="@+id/train_two"
-        android:layout_alignLeft="@+id/purpose"/>
+        android:layout_alignLeft="@+id/purpose" />
 
 
     <ImageView
@@ -82,7 +82,7 @@
         android:layout_alignParentRight="true"
         android:layout_toEndOf="@+id/calendar"
         android:inputType="date"
-        android:hint="Pilih Tanggal"/>
+        android:hint="Pilih Tanggal" />
 
     <TextView
         android:id="@+id/go_home"
@@ -91,14 +91,14 @@
         android:text="Pulang pergi?"
         android:textSize="20dp"
         android:layout_below="@+id/purpose"
-        android:layout_alignRight="@+id/choose_date"/>
+        android:layout_alignRight="@+id/choose_date" />
 
     <Switch
         android:id="@+id/mySwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/go_home"
-        android:layout_alignRight="@+id/go_home"/>
+        android:layout_alignRight="@+id/go_home" />
 
     <TextView
         android:id="@+id/passenger"
@@ -107,14 +107,14 @@
         android:text="Penumpang"
         android:textSize="20dp"
         android:layout_below="@+id/calendar"
-        android:layout_alignLeft="@+id/choose_date"/>
+        android:layout_alignLeft="@+id/choose_date" />
 
     <ImageView
         android:id="@+id/walk_way"
         android:layout_width="50dp"
         android:layout_height="40dp"
         android:layout_below="@+id/passenger"
-        android:src="@drawable/ic_walkway"/>
+        android:src="@drawable/ic_walkway" />
 
     <EditText
         android:id="@+id/passenger_category"
@@ -124,7 +124,7 @@
         android:layout_alignParentRight="true"
         android:layout_toEndOf="@+id/walk_way"
         android:inputType="text"
-        android:hint="kategori penumpang"/>
+        android:hint="kategori penumpang" />
 
     <TextView
         android:id="@+id/additional"
@@ -134,7 +134,7 @@
         android:text="Penumpang bayi tidak mendapat kursi sendiri"
         android:textSize="15dp"
         android:layout_alignLeft="@+id/passenger_category"
-        android:lines="10"/>
+        android:lines="10" />
 
 
     <LinearLayout
@@ -144,7 +144,7 @@
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        android:paddingTop="16dp"/>
+        android:paddingTop="16dp" />
 
     <Button
         android:layout_width="match_parent"
@@ -154,9 +154,18 @@
         android:text="Oke"
         android:textSize="24sp"
         android:layout_below="@+id/additional"
-        android:background="#FFFF0000"/>
+        android:background="#FFFF0000" />
 
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_done"
+        android:layout_below="@+id/from"
+        android:layout_alignRight="@+id/origin"
+        android:backgroundTint="#FF0000FF"
+        android:tint="#FFFFFFFF"/>
 
 
 </RelativeLayout>
